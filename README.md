@@ -8,6 +8,68 @@
     <a href='https://gitcode.com/opennovel/novel'><img alt="GitCode star" src="https://gitcode.com/opennovel/novel/star/badge.svg"></a>
 </p>
 
+
+
+
+<div align="center">
+
+# 📖 小说
+
+**一名网文作者的小说阅读站 · 基于 [novel](https://github.com/201206030/novel) 前端深度定制**
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Vue](https://img.shields.io/badge/Vue-3.x-42b883.svg)](https://v3.vuejs.org)
+[![Element Plus](https://img.shields.io/badge/Element%20Plus-2.x-409EFF.svg)](https://element-plus.org)
+
+
+</div>
+
+## ✨ 这是什么
+
+我平时写小说，一直想有一块完全属于自己的"自留地"来陈列作品，于是基于开源项目 [novel](https://github.com/201206030/novel) 的前端改造了这套小说阅读站。
+
+它保留了原项目的核心能力——小说推荐、作品检索、排行榜、阅读页、评论、会员中心、作家专区——在此之上做了贴合我个人使用习惯的定制。
+
+## 🎨 我的改动
+
+- 🔧 **接口对接**：对接自己部署的后端服务，接口地址集中在 [`.env.development`](.env.development) / [`.env.production`](.env.production) 中配置
+- 🌉 **跨域代理**：开发环境新增 `/api` 请求代理（[vue.config.js](vue.config.js)），本地联调不受跨域限制
+- 📖 **阅读页定制**：按个人阅读习惯调整排版与样式（[BookContent.vue](src/views/BookContent.vue)）
+- 🗑 **瘦身**：移除用不到的第三方登录与静态资源
+
+## 🚀 快速开始
+
+```bash
+# 安装依赖
+npm install
+
+# 启动开发服务（http://localhost:1024）
+npm run serve
+
+# 构建生产版本
+npm run build
+```
+
+**环境要求**：Node 16+，以及一个可用的 novel 后端服务（[novel](https://github.com/201206030/novel)）。开发环境默认将 `/api` 代理到 `http://localhost:8080`，可在 [vue.config.js](vue.config.js) 中修改。
+
+## 🛠 技术栈
+
+| 技术 | 版本 | 说明 |
+| :--- | :---: | :--- |
+| [Vue.js](https://vuejs.org) | 3.2.13 | 渐进式 JavaScript 框架 |
+| [Vue Router](https://router.vuejs.org) | 4.0.15 | 官方路由 |
+| [Element Plus](https://element-plus.org) | 2.2.0 | 基于 Vue 3 的组件库 |
+| [axios](https://axios-http.com) | 0.27.2 | 基于 Promise 的网络请求库 |
+
+
+
+## 📄 License & 致谢
+
+- 本项目基于 [novel-front-web](https://github.com/201206030/novel-front-web)（Apache License 2.0）定制开发，感谢原作者 [@xxyopen](https://github.com/201206030) 的开源贡献。
+- 本项目同样以 [Apache License 2.0](LICENSE) 协议开源，欢迎 Fork 与二次开发。
+
+
+
 ## 项目简介
 
 novel 是一套基于时下**最新** Java 技术栈 Spring Boot 3 + Vue 3 开发的前后端分离**学习型**
